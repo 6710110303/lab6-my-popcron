@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: hello-example
+  name: hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hello-example
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hello-example
+    spec:
+      containers:
+      - image: nginx  
+        name: hello-world
+        ports:
+        - containerPort: 80
