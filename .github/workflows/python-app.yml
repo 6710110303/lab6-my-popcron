@@ -36,6 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
     - name: Run Lint
-      run: make -f makefilep.txt lint
+      run: 
+        make -f makefilep.txt lint
     - name: Run Test
-      run: make -f makefilep.txt test
+      run: 
+        make -f makefilep.txt test
